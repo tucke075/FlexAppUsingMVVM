@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/DayRN"
+        android:title="DayRN"
+        android:icon="@drawable/ic_day_rn"
+        >
+    </item>
+    <item
+        android:id="@+id/DayNA"
+        android:title="DayNA"
+        android:icon="@drawable/ic_day_na"
+        >
+    </item>
+    <item
+        android:id="@+id/NightRN"
+        android:title="NightRN"
+        android:icon="@drawable/ic_night_rn"
+        >
+    </item>
+    <item
+        android:id="@+id/NightNA"
+        android:title="NightNA"
+        android:icon="@drawable/ic_night_na"
+        >
+    </item>
+</menu>
