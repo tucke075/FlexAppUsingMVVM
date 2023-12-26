@@ -1,20 +1,19 @@
-package com.example.flexappusingmvvm.VIEW
+package com.example.flexappusingmvvm.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.flexappusingmvvm.R
-import com.example.flexappusingmvvm.VIEW.bot_nav_ui.DayNaFrag
-import com.example.flexappusingmvvm.VIEW.bot_nav_ui.DayRnFrag
-import com.example.flexappusingmvvm.VIEW.bot_nav_ui.NightNaFrag
-import com.example.flexappusingmvvm.VIEW.bot_nav_ui.NightRnFrag
+import com.example.flexappusingmvvm.view.bot_nav_ui.DayNaFrag
+import com.example.flexappusingmvvm.view.bot_nav_ui.DayRnFrag
+import com.example.flexappusingmvvm.view.bot_nav_ui.NightNaFrag
+import com.example.flexappusingmvvm.view.bot_nav_ui.NightRnFrag
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-
         //variables for switching between fragments
         val dayRn = DayRnFrag()
         val dayNa = DayNaFrag()

@@ -1,4 +1,4 @@
-package com.example.flexappusingmvvm.VIEW.bot_nav_ui
+package com.example.flexappusingmvvm.view.bot_nav_ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
