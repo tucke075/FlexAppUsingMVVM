@@ -3,13 +3,12 @@ package com.example.flexappusingmvvm.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.example.flexappusingmvvm.R
 import com.example.flexappusingmvvm.viewmodel.AuthViewModel
 import com.example.flexappusingmvvm.databinding.ActivityLoginBinding
-import com.example.flexappusingmvvm.model.Repository.UserRepository
+import com.example.flexappusingmvvm.model.Repository.UserAuthRepository
 import com.example.flexappusingmvvm.viewmodel.AuthViewModelFactory
 import com.google.firebase.auth.FirebaseAuth
 
@@ -35,7 +34,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         //initializing viewModel with the AuthViewModel class to call its functions here
-        val viewModelFactory = AuthViewModelFactory(UserRepository(auth))
+        val viewModelFactory = AuthViewModelFactory(UserAuthRepository(auth))
         viewModel = ViewModelProvider(this,viewModelFactory).get(AuthViewModel::class.java)
 
         //calling login function from AuthViewModel and checking if login is a success
