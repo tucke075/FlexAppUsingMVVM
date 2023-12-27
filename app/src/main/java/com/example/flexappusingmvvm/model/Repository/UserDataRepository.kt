@@ -11,13 +11,28 @@ class UserDataRepository {
     //initializing variables to talk to firebase firestore
     private val db = FirebaseFirestore.getInstance()
 
-    fun saveDaysData(userData: UserData){
+    fun saveDaysUser(userData: UserData){
         val user: MutableMap<String, Any> = HashMap()
         user["email"] = userData.email
         user["name"] = userData.name
         user["title"] = userData.title
         user["shift"] = userData.shift
         db.collection("Days")
+            .add(user)
+            .addOnSuccessListener {
+                Log.d("Data saved successfully", "$user")
+            }
+            .addOnFailureListener { e ->
+                Log.d("Data not saved", "$e")
+            }
+    }
+    fun saveNightsUser(userData: UserData){
+        val user: MutableMap<String, Any> = HashMap()
+        user["email"] = userData.email
+        user["name"] = userData.name
+        user["title"] = userData.title
+        user["shift"] = userData.shift
+        db.collection("Nights")
             .add(user)
             .addOnSuccessListener {
                 Log.d("Data saved successfully", "$user")
